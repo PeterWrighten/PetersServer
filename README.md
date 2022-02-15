@@ -4,5 +4,5 @@ Toy Server implemented by pure Rust.
 
 # Todo List
 
-- [x] Single Thread TCPListener
+- [X] Single Thread TCPListener
 - [ ] Single Thread Response
