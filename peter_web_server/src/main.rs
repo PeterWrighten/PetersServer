@@ -7,7 +7,7 @@ fn main() {
     let listener = TcpListener::bind("127.0.0.1:5659").unwrap();
     let pool = ThreadPool::new(4);
 
-    for stream in listener.incoming() {
+    for stream in listener.incoming().take(10) {
         let stream = stream.unwrap();
 
         pool.execute(|| { handle_stream(stream); });  /* Instead 'thread::spawn(|| {})' */
